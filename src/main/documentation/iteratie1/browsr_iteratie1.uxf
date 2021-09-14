@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>495</x>
+      <y>505</y>
+      <w>115</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>DocumentController
+--
+- url: String
+--
++ getUrl: String
++ getContentspan: Contentspan
++ updateUrl(url: String)
++ clickedLink(link: String)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>680</x>
+      <y>500</y>
+      <w>70</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>/ContentSpan/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>515</y>
+      <w>15</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>645</x>
+      <y>540</y>
+      <w>90</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>160.0;20.0;10.0;20.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>575</y>
+      <w>50</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Text
+--
+- text: String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>625</x>
+      <y>575</y>
+      <w>50</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Link
+--
+- href: String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>760</x>
+      <y>575</y>
+      <w>50</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>Table
+--
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>540</y>
+      <w>80</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;140.0;20.0;140.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>745</x>
+      <y>500</y>
+      <w>140</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n
+r1=elements</panel_attributes>
+    <additional_attributes>10.0;20.0;260.0;20.0;260.0;310.0;130.0;310.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>605</x>
+      <y>500</y>
+      <w>85</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+r1=content</panel_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>760</x>
+      <y>650</y>
+      <w>50</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>TableRow
+--
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>525</y>
+      <w>85</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+r1=controller</panel_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>295</y>
+      <w>145</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>AddressBarComponent
+--
+- url: String
+- editMode: boolean
+- cursorPosition: int
+- urlAtFocus: String
+- symbolWidth: int
+- shiftDown: boolean
+--
++ markSelected(g: Graphics, x: int, y: int)
++ resetSelectedRange()
+- moveCursorToEndOfUrl()
+- removeChar()
+- deleteChar()
+- addChar(keyChar: char)
++ moveCursorLeft(): boolean
++ moveCursorRight(): boolean
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>590</x>
+      <y>295</y>
+      <w>60</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>LinkComponent
+--
+- href: String
+--
+- linkClick()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>555</x>
+      <y>260</y>
+      <w>140</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>260.0;20.0;10.0;20.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>615</x>
+      <y>265</y>
+      <w>15</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>295</y>
+      <w>60</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>TextComponent
+--
+- text: String
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>295</y>
+      <w>110</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>TableComponent
+--
+--
++ setColumnWidths()
++ setWidthByRows()
++ setWidthByRows()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>910</x>
+      <y>295</y>
+      <w>110</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>TableRowComponent
+--
+--
++ setXCoordinatesOfCells()
++ setWidthByCells()
++ setHeightByCells()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>205</x>
+      <y>310</y>
+      <w>225</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>DocumentComponent
+--
+--
++ handleLinkClick(link: String)
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>500</x>
+      <y>130</y>
+      <w>265</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>/Component/
+--
+- x: int
+- y: int
+- width: int
+- height: int
+--
++ paint(g: Graphics)
++ handleMouseEvent(id: int, x: int, y: int, clickCount: int, button: int, modifiersEx: int)
++ handleKeyEvent(id: int, keyCode: int, keyChar: char, modifiersEx: int)
++ isPositionInComponent(x: int, y: int): boolean
++ addClickListener(listener: ClickListener)
++ removeClickListener(listener: ClickListener)
++ addKeyListener(listener: KeyListener)
++ removeKeyListener(listener: KeyListener)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>245</y>
+      <w>15</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>260</y>
+      <w>135</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;250.0;20.0;250.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>800</x>
+      <y>260</y>
+      <w>170</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;320.0;20.0;320.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>845</x>
+      <y>295</y>
+      <w>75</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n
+r1= rows</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>365</x>
+      <y>260</y>
+      <w>205</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>390.0;20.0;10.0;20.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>335</x>
+      <y>160</y>
+      <w>175</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+r1=component</panel_attributes>
+    <additional_attributes>330.0;20.0;10.0;20.0;10.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>295</x>
+      <y>515</y>
+      <w>130</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>BrowsrWindow
+--
+--
+- handleClickLink(href: String)
+- handleEnteredLink(href: String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>340</y>
+      <w>80</w>
+      <h>185</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+r1=docViewer</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;250.0;140.0;250.0;140.0;350.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>345</x>
+      <y>425</y>
+      <w>220</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+r1=addressbar</panel_attributes>
+    <additional_attributes>350.0;10.0;350.0;80.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>780</x>
+      <y>595</y>
+      <w>30</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n
+r1=rows</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>500</x>
+      <y>40</y>
+      <w>80</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+ClickListener
+--
+linkClicked(href: String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>535</x>
+      <y>75</y>
+      <w>55</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n
+r1=clickListeners</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>635</x>
+      <y>40</y>
+      <w>80</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+KeyListener
+--
+linkEntered(href: String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>670</x>
+      <y>75</y>
+      <w>55</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n
+r1=keyListeners</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>760</x>
+      <y>160</y>
+      <w>245</w>
+      <h>145</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..1
+r1=cells</panel_attributes>
+    <additional_attributes>10.0;20.0;470.0;20.0;470.0;270.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>675</x>
+      <y>395</y>
+      <w>50</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Range
+--
+- left: int
+- right: int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>580</x>
+      <y>405</y>
+      <w>105</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+r1=selectedRange</panel_attributes>
+    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>600</y>
+      <w>290</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>ToComponentUtil
+--
+--
+toComponent(x: int, y: int,contentSpan: Contentspan, metrics: FontMetrics): Component</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>340</x>
+      <y>555</y>
+      <w>15</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

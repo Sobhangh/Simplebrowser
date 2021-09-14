@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>235</y>
+      <w>160</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>TableRow
+--
+elements: List&lt;TableCell&gt;
+--
+convertToTableRow(HtmlLexer lexer): TableRow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>310</y>
+      <w>160</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>TableCell
+--
+content: ContentSpan
+--
+convertToTableCell(HtmlLexer lexer): TableCell</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>405</x>
+      <y>160</y>
+      <w>130</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Table
+--
+rows: List&lt;TableRow&gt;
+--
+convertToTable(HtmlLexer lexer): Table</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>0</y>
+      <w>220</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>/AbstractClass/
+Contentspan
+--
+--
+convertToContentSpan(HtmlLexer lexer): Contentspan
+
+consumeToken(TokenType tokenType, String tokenValue, HtmlLexer lexer): void
+consumeToken(TokenType tokenType, HtmlLexer lexer): void
+consumeAttribute(String attributeName, HtmlLexer lexer): String
+consumeStartTag(String tagName, HtmlLexer lexer): void
+consumeEndTag(String tagName, HtmlLexer lexer): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>550</x>
+      <y>160</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Link
+--
+href: String
+text: Text
+--
+convertToHyperlink(HtmlLexer lexer): Link
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>160</y>
+      <w>145</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Text
+--
+text: String
+--
+convertToTextSpan(HtmlLexer lexer): Text</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>165</x>
+      <y>170</y>
+      <w>205</w>
+      <h>175</h>
+    </coordinates>
+    <panel_attributes>Document
+--
+url: String
+content: List&lt;ContentSpan&gt;
+listeners: List&lt;DocumentListener&gt;
+lexer: HtmlLexer
+--
+Document(String Url)
+Document(String Url, String spec)
+getUrl(): String
+getContentSpan(): Contentspan
+updateUrl(String url): void
+updateUrl(String url, String spec): void
+
+addListener(DocumentListener listener): void
+removeListener(DocumentListener listener):void
+fireContentChanged(): void
+
+convertHtmlToContentspan(String urlStr): void
+convertHtmlToContentspan(String urlStr, String specUrl)
+getHtmlFromUrl(URL url): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>85</y>
+      <w>15</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>255</x>
+      <y>135</y>
+      <w>195</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>370.0;20.0;10.0;20.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>135</y>
+      <w>180</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;340.0;20.0;340.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>595</x>
+      <y>135</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;310.0;20.0;310.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>445</x>
+      <y>190</y>
+      <w>50</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..n
+contains &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>265</y>
+      <w>50</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..n
+contains &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>535</y>
+      <w>105</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>DocumentViewer
+--
+document: Document
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>470</x>
+      <y>535</y>
+      <w>300</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>AddressBar
+--
+editMode: boolean
+currentUrl: String
+prevUrl: String
+cursorPosition: int
+--
+switchEditMode()
+paint(Graphics g, int x, int y, int width, int symbolWidth): void
+markSelected(Graphics g, int x, int y, int symbolWidth): void
+handleMouseEvent(int id, int x, int y, int clickCount, Panel panel, int symbolWidth): void
+handleKeyEvent(int id, int keyCode, char keyChar, Panel panel): boolean
+getCursorPosition(): int
+setCursorPosition(int cursorPosition): void
+getSelectedRangeLeft(): int
+getSelectedRangeRight(): int
+isSelectedEmpty(): boolean
+setSelectedRange(int x, int y): void
+resetSelectedRange(): void
+moveCursorToEndOfUrl(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>395</y>
+      <w>205</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>BrowsrCanvas
+--
+String defaultText
+Font font
+FontMetrics metrics
+int textWidth
+AddressBar addressbar
+DocumentViewer documentViewer
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>720</x>
+      <y>295</y>
+      <w>170</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>CanvasWindow
+--
+Class of prof. Jacobs
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>795</x>
+      <y>325</y>
+      <w>15</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>455</y>
+      <w>90</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=1
+</panel_attributes>
+    <additional_attributes>160.0;20.0;10.0;20.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>900</x>
+      <y>465</y>
+      <w>45</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;60.0;20.0;60.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>525</x>
+      <y>375</y>
+      <w>105</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+DocumentListener
+--
+contentChanged()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>345</x>
+      <y>340</y>
+      <w>225</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>430.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>140</x>
+      <y>65</y>
+      <w>215</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>Should the convert methods (e.g. convertToTextSpan) 
+be placed in the specific class they are being converted to?
+And should the consumeToken help functions be placed into 
+the Contentspan class?
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>280</x>
+      <y>555</y>
+      <w>185</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>AddressBar is used to obtain an URL 
+=&gt; this URL should then be used to update the document
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>685</x>
+      <y>485</y>
+      <w>185</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>The Addressbar should change the url of the document
+And the DocumentViewer shows the Contentspan kept 
+in the document &amp; should be update 
+if a new URL is given.
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>495</x>
+      <y>415</y>
+      <w>165</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>Should we place the document instance in 
+the BrowsrCanvas or the DocumentViewer?
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
